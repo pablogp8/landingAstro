@@ -7,10 +7,13 @@ import '../styles/global.css';
 <div id="container" >
 	<main>
 		<nav class="flex flex-col items-center justify-between w-full min-h-screen text-center md:flex-row">
-			<div class="text-primarytxt font-cormorant">
+			<div class="flex flex-col justify-between h-screen p-4 text-primarytxt font-cormorant">
 				<img src={'/src/assets/Images/LogoInmob.png'} alt="Logo inmobiliaria" class="w-1/2 md:w-1/3 lg:w-1/4" />
 				<h1 class="text-8xl">¡Construimos tus sueños!</h1>
-				<h2>hello</h2>
+				<a href="#contacto"
+   				class="contact-link px-6 py-2 border border-teal-500 text-teal-100 rounded-full text-base hover:bg-teal-500 hover:text-black transition-colors duration-300">
+   					¡Haz una cita!
+				</a>
 			</div>
 			<div class="text-white">
 				<img src={'/src/assets/Images/cocina1.png'} alt="Astro Logo" class="w-full min-h-screen" />
@@ -21,5 +24,7 @@ import '../styles/global.css';
 </div>
 
 <style>
-	
+	.contact-link {
+        display: inline-block; /* Asegura que el enlace solo ocupe el espacio necesario */
+    }
 </style>
