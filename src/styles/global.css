@@ -4,6 +4,8 @@
 
 @theme {
     --color-primarytxt: #C7D2D2;
+    --color-second-background: #C7D2D2;
+    --color-secondtxt: #35686D;
     --font-serif: 'Playfair Display', serif;
     --font-cormorant: 'Cormorant Garamond', serif;
 }
