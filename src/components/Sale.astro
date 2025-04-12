@@ -1,0 +1,54 @@
+---
+import astroLogo from '../assets/astro.svg';
+import background from '../assets/background.svg';
+import '../styles/global.css';
+---
+
+<div id="container" >
+	<main class=" min-h-screen px-8 py-12 text-primarytxt font-cormorant">
+        <h2 class="text-6xl text-center mb-12">Propiedades a la venta</h2>
+      
+        <!-- Carrusel horizontal -->
+        <div class="flex flex-row justify-center w-full gap-6 overflow-x-auto scroll-smooth pb-4">
+          <!-- Card de propiedad -->
+          <div class="w-full md:basis-[33%]">
+            <img src="/src/assets/Images/v1.png" alt="Casa 1" class="w-full h-64 object-cover rounded-t-md mb-6" />
+            <div class="text-center py-4 border-y border-teal-500" >
+              <h3 class="text-lg font-semibold">Casa</h3>
+              <p>Kilómetro 20, Carr. San José Pinula, colonia Lo de Valdez</p>
+              <p class="mt-2 text-sm">3 Habitaciones | 3 Baños</p>
+              <p class="text-sm">CLOSETS, Gabinetes de cocina, acabados de primera</p>
+            </div>
+          </div>
+      
+          <!-- Otra propiedad -->
+          <div class="w-full md:basis-[33%]">
+            <img src="/src/assets/Images/v2.png" alt="Casa 2" class="w-full h-64 object-cover rounded-t-md mb-6" />
+            <div class="text-center py-4 border-y border-teal-500">
+              <h3 class="text-lg font-semibold">Condo</h3>
+              <p>123 Anywhere St., Any City</p>
+              <p class="mt-2 text-sm">1 Bed | 2 Baths | 1 Car</p>
+              <p>.</p>
+            </div>
+          </div>
+      
+          <!-- Otra propiedad -->
+          <div class="w-full md:basis-[33%] ">
+            <img src="/src/assets/Images/v3.png" alt="Casa 3" class="w-full h-64 object-cover rounded-t-md mb-6" />
+            <div class="text-center py-4 border-y border-teal-500">
+              <h3 class="text-lg font-semibold">Single-family home</h3>
+              <p>123 Anywhere St., Any City</p>
+              <p class="mt-2 text-sm">2 Beds | 3 Baths | 2 Cars</p>
+              <p class="text-sm">Wheelchair accessible listing</p>
+            </div>
+          </div>
+        </div>
+      </main>     
+	
+</div>
+
+<style>
+	.contact-link {
+        display: inline-block; /* Asegura que el enlace solo ocupe el espacio necesario */
+    }
+</style>
