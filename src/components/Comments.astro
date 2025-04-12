@@ -1,0 +1,66 @@
+---
+import astroLogo from '../assets/astro.svg';
+import background from '../assets/background.svg';
+import '../styles/global.css';
+---
+
+<div id="container" >
+	   
+	<section class="w-full min-h-screen bg-cover bg-center text-white py-16 px-4 md:px-12" style="background-image: url('/src/assets/Images/salaInt.png');">
+        <h2 class="text-4xl text-center font-cormorant mb-16">Testimonios</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <!-- Testimonio 1 -->
+          <div class="bg-black/50 p-6 rounded-lg opacity-0 translate-y-4 transition duration-700 ease-in-out" data-animate>
+            <div class="text-teal-400 text-3xl mb-4">“</div>
+            <p class="mb-6">Mi esposa y yo estamos muy felices con nuestro nuevo hogar, agradecemos profundamente al equipo de campo inmobiliario por hacer este sueño realidad y tener la paciencia para cumplir con cada uno de los cambios que solicitamos durante la construcción.</p>
+            <div>
+              <p class="font-bold">Carlos Solares</p>
+              <p class="text-sm">15/Noviembre/2020</p>
+            </div>
+          </div>
+          <!-- Testimonio 2 -->
+          <div class="bg-black/50 p-6 rounded-lg opacity-0 translate-y-4 transition duration-700 ease-in-out" data-animate>
+            <div class="text-teal-400 text-3xl mb-4">“</div>
+            <p class="mb-6">Estamos muy felices con nuestra nueva casa, nos encantó el concepto moderno y los acabados de la casa, aparte de la ubicación perfecta para el colegio de nuestros hijos y la seguridad del condominio, gracias a Campo Inmobiliario.</p>
+            <div>
+              <p class="font-bold">Fam. Rodríguez</p>
+              <p class="text-sm">23/Julio/2022</p>
+            </div>
+          </div>
+          <!-- Testimonio 3 -->
+          <div class="bg-black/50 p-6 rounded-lg opacity-0 translate-y-4 transition duration-700 ease-in-out" data-animate>
+            <div class="text-teal-400 text-3xl mb-4">“</div>
+            <p class="mb-6">La casa quedó mucho mejor de lo que se veía en los renders, cumplió nuestras expectativas, con una excelente ubicación.</p>
+            <div>
+              <p class="font-bold">Carolina Martínez</p>
+              <p class="text-sm">17/Noviembre/2024</p>
+            </div>
+          </div>
+        </div>
+      
+        
+      </section>
+</div>
+
+<style>
+	.contact-link {
+        display: inline-block; /* Asegura que el enlace solo ocupe el espacio necesario */
+    }
+</style>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('opacity-0', 'translate-y-4');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('[data-animate]').forEach(el => {
+      observer.observe(el);
+    });
+  </script>

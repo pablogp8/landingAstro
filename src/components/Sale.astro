@@ -5,50 +5,123 @@ import '../styles/global.css';
 ---
 
 <div id="container" >
-	<main class=" min-h-screen px-8 py-12 text-primarytxt font-cormorant">
-        <h2 class="text-6xl text-center mb-12">Propiedades a la venta</h2>
+	<main class="bg-[#1b1f1d] min-h-screen w-full h-screen px-4 md:px-8 py-12 text-primarytxt font-cormorant" onmouseenter="pauseCarousel()" onmouseleave="resumeCarousel()">
+        <h2 class="text-4xl text-center mb-12">Propiedades a la venta</h2>
       
-        <!-- Carrusel horizontal -->
-        <div class="flex flex-row justify-center w-full gap-6 overflow-x-auto scroll-smooth pb-4">
-          <!-- Card de propiedad -->
-          <div class="w-full md:basis-[33%]">
-            <img src="/src/assets/Images/v1.png" alt="Casa 1" class="w-full h-64 object-cover rounded-t-md mb-6" />
-            <div class="text-center py-4 border-y border-teal-500" >
-              <h3 class="text-lg font-semibold">Casa</h3>
-              <p>Kilómetro 20, Carr. San José Pinula, colonia Lo de Valdez</p>
-              <p class="mt-2 text-sm">3 Habitaciones | 3 Baños</p>
-              <p class="text-sm">CLOSETS, Gabinetes de cocina, acabados de primera</p>
+        <div class="relative h-[calc(100vh-6rem)] overflow-hidden">
+          <!-- Botones de navegación -->
+          <button id="prevBtn" class="hidden md:flex absolute left-0 top-1/2 transform -translate-y-1/2 bg-teal-600 text-white p-2 rounded-full z-10 hover:bg-teal-500">&#8592;</button>
+          <button id="nextBtn" class="hidden md:flex absolute right-0 top-1/2 transform -translate-y-1/2 bg-teal-600 text-white p-2 rounded-full z-10 hover:bg-teal-500">&#8594;</button>
+      
+          <!-- Carrusel -->
+          <div id="carousel" class="flex transition-transform duration-500 h-full w-[500%]" style="transform: translateX(0%);">
+            <!-- Cada slide ocupa 1/5 del carrusel (20%) -->
+            <div class="w-1/5 flex flex-col justify-center items-center p-4">
+              <div class="w-full max-w-sm bg-[#1b1f1d] border-t border-teal-500">
+                <img src="/src/assets/Images/v1.png" alt="Casa 1" class="w-full h-64 object-cover rounded-t-md hover:scale-105 transition-transform duration-300" />
+                <div class="text-center py-4">
+                  <h3 class="text-lg font-semibold">Casa</h3>
+                  <p>Kilómetro 20, Carr. San José Pinula, colonia Lo de Valdez</p>
+                  <p class="mt-2 text-sm">3 Habitaciones | 3 Baños</p>
+                  <p class="text-sm">CLOSETS, Gabinetes de cocina, acabados de primera</p>
+                </div>
+              </div>
             </div>
-          </div>
-      
-          <!-- Otra propiedad -->
-          <div class="w-full md:basis-[33%]">
-            <img src="/src/assets/Images/v2.png" alt="Casa 2" class="w-full h-64 object-cover rounded-t-md mb-6" />
-            <div class="text-center py-4 border-y border-teal-500">
-              <h3 class="text-lg font-semibold">Condo</h3>
-              <p>123 Anywhere St., Any City</p>
-              <p class="mt-2 text-sm">1 Bed | 2 Baths | 1 Car</p>
-              <p>.</p>
+            <div class="w-1/5 flex flex-col justify-center items-center p-4">
+              <div class="w-full max-w-sm bg-[#1b1f1d] border-t border-teal-500">
+                <img src="/src/assets/Images/v2.png" alt="Casa 2" class="w-full h-64 object-cover rounded-t-md hover:scale-105 transition-transform duration-300" />
+                <div class="text-center py-4">
+                  <h3 class="text-lg font-semibold">Condo</h3>
+                  <p>123 Anywhere St., Any City</p>
+                  <p class="mt-2 text-sm">1 Bed | 2 Baths | 1 Car</p>
+                </div>
+              </div>
             </div>
-          </div>
-      
-          <!-- Otra propiedad -->
-          <div class="w-full md:basis-[33%] ">
-            <img src="/src/assets/Images/v3.png" alt="Casa 3" class="w-full h-64 object-cover rounded-t-md mb-6" />
-            <div class="text-center py-4 border-y border-teal-500">
-              <h3 class="text-lg font-semibold">Single-family home</h3>
-              <p>123 Anywhere St., Any City</p>
-              <p class="mt-2 text-sm">2 Beds | 3 Baths | 2 Cars</p>
-              <p class="text-sm">Wheelchair accessible listing</p>
+            <div class="w-1/5 flex flex-col justify-center items-center p-4">
+              <div class="w-full max-w-sm bg-[#1b1f1d] border-t border-teal-500">
+                <img src="/src/assets/Images/v3.png" alt="Casa 3" class="w-full h-64 object-cover rounded-t-md hover:scale-105 transition-transform duration-300" />
+                <div class="text-center py-4">
+                  <h3 class="text-lg font-semibold">Single-family home</h3>
+                  <p>123 Anywhere St., Any City</p>
+                  <p class="mt-2 text-sm">2 Beds | 3 Baths | 2 Cars</p>
+                  <p class="text-sm">Wheelchair accessible listing</p>
+                </div>
+              </div>
+            </div>
+            <div class="w-1/5 flex flex-col justify-center items-center p-4">
+              <div class="w-full max-w-sm bg-[#1b1f1d] border-t border-teal-500">
+                <img src="/src/assets/Images/v4.png" alt="Casa 4" class="w-full h-64 object-cover rounded-t-md hover:scale-105 transition-transform duration-300" />
+                <div class="text-center py-4">
+                  <h3 class="text-lg font-semibold">Villa de lujo</h3>
+                  <p>Zona exclusiva, Vista panorámica</p>
+                  <p class="mt-2 text-sm">5 Habitaciones | 4 Baños | Piscina</p>
+                </div>
+              </div>
+            </div>
+            <div class="w-1/5 flex flex-col justify-center items-center p-4">
+              <div class="w-full max-w-sm bg-[#1b1f1d] border-t border-teal-500">
+                <img src="/src/assets/Images/v5.png" alt="Casa 5" class="w-full h-64 object-cover rounded-t-md hover:scale-105 transition-transform duration-300" />
+                <div class="text-center py-4">
+                  <h3 class="text-lg font-semibold">Townhouse</h3>
+                  <p>456 Example Rd., Your City</p>
+                  <p class="mt-2 text-sm">3 Beds | 2.5 Baths | 1 Car</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </main>     
-	
+      
+        
+      </main>
+      
 </div>
 
 <style>
-	.contact-link {
-        display: inline-block; /* Asegura que el enlace solo ocupe el espacio necesario */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
     }
-</style>
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<script>
+    const carousel = document.getElementById('carousel');
+    const totalSlides = carousel.children.length;
+    const visibleSlides = 1;
+    const slideWidth = 100 / totalSlides;
+    let currentIndex = 0;
+    let intervalId;
+
+    function updateCarousel() {
+      const offset = (currentIndex * slideWidth);
+      carousel.style.transform = `translateX(-${offset}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + visibleSlides) % totalSlides;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - visibleSlides + totalSlides) % totalSlides;
+      updateCarousel();
+    }
+
+    function startCarousel() {
+      intervalId = setInterval(nextSlide, 5000);
+    }
+
+    function pauseCarousel() {
+      clearInterval(intervalId);
+    }
+
+    function resumeCarousel() {
+      startCarousel();
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', nextSlide);
+    document.getElementById('prevBtn').addEventListener('click', prevSlide);
+
+    startCarousel();
+  </script>
