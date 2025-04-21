@@ -8,4 +8,6 @@
     --color-secondtxt: #35686D;
     --font-serif: 'Playfair Display', serif;
     --font-cormorant: 'Cormorant Garamond', serif;
+    --breakpoint-mm: 900px;
+    --breakpoint-xm: 1480px;
 }
