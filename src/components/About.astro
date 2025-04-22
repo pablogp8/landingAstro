@@ -7,16 +7,16 @@ import '../styles/global.css';
 
 <div id="container" >
 	<main>
-		<nav class="flex flex-col items-center justify-between w-full min-h-screen text-center md:flex-row">
-			<div class="w-full md:basis-[45%] ">
+		<nav class="flex flex-col items-center justify-between w-full min-h-screen text-center md:flex-row fondoP">
+			<div class="w-full md:basis-[45%] max-md:hidden">
 				<img src={srd1.src} alt="Campo Logo" class="w-full min-h-screen object-none" />
 			</div>
-            <div class="w-full md:basis-[55%] flex flex-col justify-center p-25 h-screen  text-primarytxt font-cormorant items-start gap-12">
-				<h1 class="text-7xl md:text-6xl sm:text-5xl text-left max-w-3xl">
+            <div class="w-full md:basis-[55%] flex flex-col justify-center p-25 max-md:p-5 h-screen max-md:text-white  text-primarytxt font-cormorant items-start gap-12 max-md:items-center">
+				<h1 class="xm:text-7xl xl:text-6xl lg:text-5xl mm:text-4xl text-left max-w-3xl max-md:text-center text-3xl">
 				  Somos una empresa dedicada a crear proyectos inmobiliarios, con más de 15 años de experiencia ofreciendo los mejores acabados adecuados a los gustos de los clientes.
 				</h1>
 				<a href="#contacto"
-				   class="text-2xl w-[40%] px-6 py-2 border border-teal-500 text-teal-100 rounded-full hover:bg-teal-500 hover:text-black hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-in-out text-center">
+				   class="text-2xl w-[40%] max-lg:w-[75%] px-6 py-2 border border-teal-500 text-teal-100 rounded-full hover:bg-teal-500 hover:text-black hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-in-out text-center">
 				   Contáctanos
 				</a>
 			  </div>		
@@ -28,5 +28,11 @@ import '../styles/global.css';
 <style>
 	.contact-link {
         display: inline-block; /* Asegura que el enlace solo ocupe el espacio necesario */
+    }
+
+	@media (width < 48rem /* 768px */) {
+        .fondoP {
+          background-image: url('../assets/Images/srd1.jpg');
+        }        
     }
 </style>
