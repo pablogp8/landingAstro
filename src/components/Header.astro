@@ -2,16 +2,67 @@
 console.log('javascript');
 import '../styles/global.css';
 ---
+---
+---
 
-<head class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
-    <div class="mx-auto  text-center mb-8 lg:mb-16">
-        <h2 class="mb-4 mt-3 text-5xl tracking-tight font-extrabold text-white">
-            Real State
-        </h2>
-        <p class="font-light text-gray-500 sm:text-xl dark:text-gray400">
-            All the information about spaceX launches
-        </p>
+<nav class="fixed top-0 left-0 w-full z-50 bg-black/80 text-white shadow-md backdrop-blur-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex-shrink-0 font-bold text-xl">
+        <a href="#">Campo Inmobiliario</a>
+      </div>
+      <div class="hidden md:flex space-x-4">
+        <a href="#inicio" class="hover:text-teal-400 transition scroll-link">Inicio</a>
+        <a href="#nosotros" class="hover:text-teal-400 transition scroll-link">Nosotros</a>
+        <div class="relative group">
+          <button class="hover:text-teal-400 transition">Propiedades</button>
+          <div class="absolute hidden group-hover:block bg-black text-white mt-2 py-2 w-48 rounded shadow-lg">
+            <a href="#venta" class="block px-4 py-2 hover:bg-teal-500 scroll-link">En venta</a>
+            <a href="#proyecto" class="block px-4 py-2 hover:bg-teal-500 scroll-link">Proyectos</a>
+            <!-- <a href="#destacadas" class="block px-4 py-2 hover:bg-teal-500 scroll-link">Destacadas</a>-->
+          </div>
+        </div>        
+        <a href="#comentario" class="hover:text-teal-400 transition scroll-link">Testimonios</a>
+        <a href="#contacto" class="hover:text-teal-400 transition scroll-link">Contacto</a>
+      </div>
+      <!-- Menú móvil -->
+      <div class="md:hidden">
+        <button id="mobileMenuBtn" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
     </div>
+  </div>
+  <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+    <a href="#inicio" class="block py-2 scroll-link">Inicio</a>
+    <a href="#nosotros" class="block py-2 scroll-link">Nosotros</a>
+    <a href="#venta" class="block py-2 scroll-link">En venta</a>
+    <a href="#proyecto" class="block py-2 scroll-link">Proyectos</a>
+    <a href="#comentario" class="block py-2 scroll-link">Testimonios</a>    
+    <a href="#contacto" class="block py-2 scroll-link">Contacto</a>
+  </div>
 
-    
-</head>
+  <script>
+    const btn = document.getElementById('mobileMenuBtn');
+    const menu = document.getElementById('mobileMenu');
+    const links = document.querySelectorAll('.scroll-link');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+        menu.classList.add('hidden');
+      });
+    });
+  </script>
+</nav>
