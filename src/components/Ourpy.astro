@@ -15,34 +15,40 @@ import '../styles/global.css';
         <div class="flex flex-row justify-center w-full gap-6 overflow-x-auto scroll-smooth pb-4">
           <!-- Card de propiedad -->
           <div class="w-full md:basis-[33%]">
-            <img src={v1.src} alt="Casa 1" class="w-full h-64 object-cover rounded-t-md mb-6" />
+            <a href={'/sale/casa1'}>
+              <img src="/proyecto/p1.jpg" alt="Casa 1" class="w-full h-64 object-cover rounded-t-md mb-6" />
+            </a>
             <div class="text-center py-4 border-y border-teal-500" >
               <h3 class="text-lg font-semibold">Casa</h3>
               <p>Kilómetro 20, Carr. San José Pinula, colonia Lo de Valdez</p>
               <p class="mt-2 text-sm">3 Habitaciones | 3 Baños</p>
-              <p class="text-sm">CLOSETS, Gabinetes de cocina, acabados de primera</p>
+              <p class="text-sm md:hidden">Espaciosos ambientes, sala familiar, acabados de primera</p>
             </div>
           </div>
       
           <!-- Otra propiedad -->
           <div class="w-full md:basis-[33%]">
-            <img src={v2.src} alt="Casa 2" class="w-full h-64 object-cover rounded-t-md mb-6" />
+            <a href={'/sale/casa2'}>
+              <img src="/proyecto/p2.jpg" alt="Casa 2" class="w-full h-64 object-cover rounded-t-md mb-6" />
+            </a>
             <div class="text-center py-4 border-y border-teal-500">
-              <h3 class="text-lg font-semibold">Condo</h3>
-              <p>123 Anywhere St., Any City</p>
-              <p class="mt-2 text-sm">1 Bed | 2 Baths | 1 Car</p>
-              <p>.</p>
+              <h3 class="text-lg font-semibold">Casa</h3>
+              <p>km 16.5 entrada a Olmeca, Carr. a El Salvador, Condominio Terra vista</p>
+              <p class="mt-2 text-sm">5 Habitaciones | 6 Baños</p>
+              <p class="text-sm max-md:hidden">Modernos acabados, cocina abierta y todos los ambientes con iluminacion natural es algo que caracteriza nuestra residencia</p>
             </div>
           </div>
       
           <!-- Otra propiedad -->
           <div class="w-full md:basis-[33%] ">
-            <img src={v3.src} alt="Casa 3" class="w-full h-64 object-cover rounded-t-md mb-6" />
+            <a href={'/sale/casa1'}>
+              <img src="/proyecto/p3.jpg" alt="Casa 3" class="w-full h-64 object-cover rounded-t-md mb-6" />
+            </a>
             <div class="text-center py-4 border-y border-teal-500">
               <h3 class="text-lg font-semibold">Single-family home</h3>
-              <p>123 Anywhere St., Any City</p>
-              <p class="mt-2 text-sm">2 Beds | 3 Baths | 2 Cars</p>
-              <p class="text-sm">Wheelchair accessible listing</p>
+              <p>km 20.5 carretera a Fraijanes, Condominio Vila Verde 1</p>
+              <p class="mt-2 text-sm">4 Habitaciones | 5 Baños</p>
+              <p class="text-sm max-md:hidden">Amplio Jardin porque entendemos la importancia de estar en contacto con el exterior estando es casa</p>
             </div>
           </div>
         </div>
