@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <section class="min-h-screen px-6 md:px-16 py-12 pt-18 text-secondtxt ">
+        <h2 class="text-4xl font-semibold mb-8 border-b pb-2 max-md:mb-2">Contáctanos</h2>
+        <div class="flex flex-col md:flex-row gap-10 max-md:gap-3 items-start">
+            <div class="bg-second-background p-6 rounded-lg shadow-md justify-center w-full md:w-2/3">
+                <h3 class="text-2xl font-semibold mb-4">Información de Contacto</h3>
+                <p class="mb-4">Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos. Estamos aquí para ayudarte.</p>
+                <ul class="space-y-2">
+                    <li><strong>Dirección:</strong> <a href="https://waze.com/ul/h9fxeh61s0&navigate=yes" target="_blank"> 12 calle 1-25 zona 10 Edificio Geminis 10 Torre Norte, 12 Nivel oficina 1210 
+                    <!-- Botón flotante de Waze -->
+                        
+                            <svg class="w-8 h-8" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1">
+                                <path d="M0 0h192v192H0z" style="fill:none"/>
+                                <path d="M167.91 57.17c-11.19-23.85-31-37.94-57.29-40.74-20.35-2.15-38.54 3.79-54.07 17.69C41.49 47.68 33.6 64.84 33.07 85.1c-.08 3 0 6 0 9v4.2c-.09 6.56-3.4 11.33-9.35 13.51l-1.57.26a4.66 4.66 0 0 0-4.36 6.31l.73 1.91c3.93 10.39 18.73 25.07 29.5 29.32l.3.12.46.17 11.27 2.26a8.09 8.09 0 0 1 15.28 3.07l11.45 2.3h10.23c2.22 0 4.48 0 6.71-.17h.63a101.71 101.71 0 0 0 11.44-1.12c1.67-.26 3.35-.6 5-1A69.27 69.27 0 0 0 131 151.9a67.88 67.88 0 0 0 10.78-5.58 70.47 70.47 0 0 0 26.18-89.15Zm-11.26 54.71a58.22 58.22 0 0 1-38.77 31.57 65 65 0 0 1-11.16 1.62c-1.07.08-2.1.14-3.07.19-3.72.24-7.45.19-11.39.14h-2.09a24.28 24.28 0 0 1-4.33-.45l-1.76-.36-28-5.62-3.37-.67a4.46 4.46 0 0 1-1-.31c-4.77-2.16-11.2-7.62-15.95-13.1a4.64 4.64 0 0 1 .5-6.53c5.61-4.78 8.81-11.74 8.93-20v-4.4c0-2.82-.05-5.75 0-8.53.45-17 6.82-30.88 19.44-42.28 12.87-11.5 27.9-16.43 44.69-14.65 22.16 2.36 38.17 13.75 47.6 33.82a57.7 57.7 0 0 1-.27 49.56Z"/>
+                                <path d="M86.87 77.85a6 6 0 1 1 6-6 6 6 0 0 1-6 6Zm54.05-6.12a6.1 6.1 0 0 1-5.95 6 5.93 5.93 0 0 1-6.05-6 6 6 0 0 1 12-.1Zm-56.84 72.84a20.22 20.22 0 1 0 3.32 12.92 15.94 15.94 0 0 0 .08-1.71 20.16 20.16 0 0 0-3.4-11.21Zm-16.82 19.3a8.09 8.09 0 1 1 8.07-8.68v.59a8.1 8.1 0 0 1-8.07 8.09Zm74.47-17.55a20.25 20.25 0 0 0-9-8.73 57.64 57.64 0 0 1-14.81 5.86 65 65 0 0 1-11.16 1.62 20.06 20.06 0 0 0-3.07 10.71c0 .55 0 1.08.07 1.62a20.21 20.21 0 1 0 38-11.08Zm-17.86 17.55a8.1 8.1 0 0 1-8.08-7.62v-.47A8.08 8.08 0 0 1 131 151.9a8 8 0 0 1 1 3.88 8.1 8.1 0 0 1-8.13 8.09Z"/>
+                                <path d="M83.73 96a28.22 28.22 0 0 0 54 0" style="stroke:#000000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:12px;fill:none"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li><strong>Teléfono:</strong> (502) 5426-4541</li>
+                    <li><strong>Email:</strong> campo.inmobiliario@outlook.com</li>
+                    <li><strong>Horario:</strong><br> Lunes a Viernes - 8:30 a.m. a 5:00 p.m. <br>Sábado - 9:00 a.m. a 12:00 p.m.</li>
+                </ul>
+            </div>
+            <div class="w-full md:w-1/3">            
+                <form class="space-y-6 max-w-lg mx-auto bg-second-background p-6 rounded-lg shadow-md">
+                    <div class="max-md:mb-2">
+                        <label for="nombre" class="block text-sm font-medium mb-1">Nombres y apellidos</label>
+                        <input type="text" id="nombre" name="nombre" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500" required />
+                    </div>
+                    <div class="max-md:mb-2">
+                        <label for="email" class="block text-sm font-medium mb-1">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500" required />
+                    </div>
+                    <div class="max-md:mb-2">
+                        <label for="telefono" class="block text-sm font-medium mb-1">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500" />
+                    </div>
+                    <div class="max-md:mb-2">
+                        <label for="mensaje" class="block text-sm font-medium mb-1">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500" required></textarea>
+                    </div>
+                    <button type="submit" class=" w-full self-end px-4 py-2 border border-teal-500 text-teal-100 rounded-full bg-teal-500 hover:bg-teal-100 hover:text-black hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-in-out">
+                        Enviar
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <script is:client>
+            async function handleSubmit(event) {
+                const formData = new FormData(event.target);
+                const data = Object.fromEntries(formData.entries());
+        
+                try {
+                    const response = await fetch('/api/send-email', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data),
+                    });
+        
+                    if (response.ok) {
+                        alert('Correo enviado exitosamente.');
+                        event.target.reset();
+                    } else {
+                        alert('Hubo un error al enviar el correo.');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Hubo un error al enviar el correo.');
+                }
+            }
+        </script>
+    </section>
+</Layout>
+
