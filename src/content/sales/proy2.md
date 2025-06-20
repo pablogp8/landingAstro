@@ -1,8 +1,8 @@
 ---
-title: Terra Vista
-address: Km. 16.5 entrada a Olmeca, Carretera a El Salvador.
+title: Proyecto 2
+address: Km. 0.5  Carretera a El Salvador.
 description: 5 Habitaciones | 6 Baños, Modernos acabados, cocina abierta y todos los ambientes con iluminacion natural es algo que caracteriza nuestra residencia
-image: casa2
+image: proy2
 
 ---
 

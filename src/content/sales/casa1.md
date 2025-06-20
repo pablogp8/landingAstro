@@ -1,8 +1,8 @@
 ---
-title: Vila Verde
-address: direccion general
-description: 4 Habitaciones | 5 Baños, Amplio Jardin porque entendemos la importancia de estar en contacto con el exterior estando es casa 
-image: casa11
+title: Villa Verde
+address: Km 20.5, Carretera a Fraijanes, Condominio Villa Verde 1.
+description: 5 Habitaciones | 6 Baños, Amplio Jardin porque entendemos la importancia de estar en contacto con el exterior estando en casa 
+image: casa1
 
 ---
 
