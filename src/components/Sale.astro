@@ -9,7 +9,7 @@ import '../styles/global.css';
 
 <div id="venta" >
 	<main class="bg-[#1b1f1d] min-h-screen w-full h-screen px-4 md:px-8 py-12 text-primarytxt font-cormorant" >
-        <h2 class="text-6xl text-center mb-12">Propiedades a la venta</h2>
+        <h2 class="text-6xl text-center mb-12 pt-4">Propiedades a la venta</h2>
       
         <div class="relative h-[calc(85vh-6rem)] overflow-hidden">
           <!-- Botones de navegación -->
@@ -17,40 +17,37 @@ import '../styles/global.css';
           <button id="nextBtn" class="hidden md:flex absolute right-0 top-1/2 transform -translate-y-1/2 bg-teal-600 text-white p-2 rounded-full z-10 hover:bg-teal-500">&#8594;</button>
       
           <!-- Carrusel -->
-          <div id="carousel" class="flex transition-transform duration-500 h-full w-[170%] max-md:w-[200%]" style="transform: translateX(0%);">
+          <div id="carousel" class="flex transition-transform duration-500 h-full overflow-hidden" >
             <!-- Cada slide ocupa 1/5 del carrusel (20%) -->
             <div class="w-full sm:w-1/2 lg:w-1/3 h-full flex flex-col justify-center items-center p-4">
               <div class="w-full max-w-sm bg-[#1b1f1d] border-t border-teal-500">
-                <a href={'/sale/casa1'}>
-                <img src="/casa1/1.jpg" alt="Casa 1" class="w-full h-64 object-cover rounded-t-md hover:scale-105 transition-transform duration-300" />
+                <a href={'/sale/proy2'}>
+                <img src="/proy2/1.jpg" alt="Casa 1" class="w-full h-64 object-cover rounded-t-md hover:scale-105 transition-transform duration-300" />
                 </a>
                 <div class="text-center py-4">
-                  <h3 class="text-lg font-semibold">Casa</h3>
-                  <p>Km 20.5, Carr. a Fraijanes, condominio Villa Verde 1</p>
-                  <p class="mt-2 text-sm">360m2 | 4 Habitaciones | Estudio</p>
-                  <p class="text-sm">Espaciosos ambientes, sala familiar, acabados de primera</p>
+                  <h3 class="text-lg font-semibold">Lo de Valdez, proyecto 2</h3>
+                  <p>Km. 20 Carretera a San José Pínula, Colonia Lo de Valdez.</p>
+                  <p class="mt-2 text-sm">3 Habitaciones | 3 Baños</p>
+                  <p class="text-sm">Acabados de primera</p>
                 </div>
               </div>
             </div>
             <div class="w-full sm:w-1/2 lg:w-1/3 h-full flex flex-col justify-center items-center p-4">
               <div class="w-full max-w-sm bg-[#1b1f1d] border-t border-teal-500">
-                <a href={'/sale/casa2'}>
-                  <img src="/casa2/1.jpg" alt="Casa 2" class="w-full h-64 object-cover rounded-t-md hover:scale-105 transition-transform duration-300" />
+                <a href={'/sale/proy3'}>
+                  <img src="/proy3/2.jpg" alt="Casa 2" class="w-full h-64 object-cover rounded-t-md hover:scale-105 transition-transform duration-300" />
                 </a>
                 <div class="text-center py-4">
-                  <h3 class="text-lg font-semibold">Condo</h3>
-                  <p>Km. 16.5 entrada a Olmeca, Carretera a El Salvador</p>
-                  <p class="mt-2 text-sm">300m2 | 4 Habitaciones | Estudio</p>
-                  <p class="text-sm">Espaciosos ambientes, sala familiar, acabados de primera</p>
+                  <h3 class="text-lg font-semibold">Lo de Valdez, proyecto 3 </h3>
+                  <p>Km. 20 Carretera a San José Pínula, Colonia Lo de Valdez.</p>
+                  <p class="mt-2 text-sm">3 Habitaciones | 3 Baños | Sala familiar</p>
+                  <p class="text-sm">Acabados de primera</p>
                 </div>
               </div>
             </div>         
           </div>
         </div>
-      
-        
       </main>
-      
 </div>
 
 <style>
@@ -61,14 +58,20 @@ import '../styles/global.css';
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
-  </style>
+</style>
 <script>
     const carousel = document.getElementById('carousel');
-    const totalSlides = carousel.children.length;
+    const slides = Array.from(carousel.children);
+    const totalSlides = slides.length; /* total de slides 2*/
     const visibleSlides = 1;
-    const slideWidth = 100 / totalSlides;
+    const slideWidth = 100 / totalSlides;/* porcentaje de cada slide 50*/
     let currentIndex = 0;
-    let intervalId;
+    let intervalId= null;    
+
+    carousel.style.width = `${totalSlides * 100}%`;
+    slides.forEach(slide => {
+      slide.style.width = `${slideWidth}%`;
+    });
 
     function updateCarousel() {
       const offset = (currentIndex * slideWidth);
@@ -85,7 +88,9 @@ import '../styles/global.css';
       updateCarousel();
     }
 
+    
     function startCarousel() {
+      if (intervalId) clearInterval(intervalId);
       intervalId = setInterval(nextSlide, 5000);
     }
 
@@ -112,10 +117,7 @@ import '../styles/global.css';
     
     // Escucha cambios de tamaño de pantalla
   window.addEventListener("resize", () => {
-    if (isMobile()) {
-      startCarousel();
-    } else {
-      pauseCarousel();
-    }
+    pauseCarousel();
+    if (isMobile()) startCarousel();
   });
   </script>
